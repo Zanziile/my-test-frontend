@@ -11,7 +11,7 @@ WORKDIR /src
 # Build
 FROM base as build
 
-COPY --link package.json package-lock.json
+COPY --link package.json package-lock.json ./
 RUN npm install --production=false
 #RUN npm install --os=linux --cpu=x64 sharp
 
